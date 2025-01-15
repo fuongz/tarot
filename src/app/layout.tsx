@@ -1,20 +1,19 @@
 import type { Metadata } from 'next'
-import { Major_Mono_Display, Montserrat_Alternates } from 'next/font/google'
+import { Cabin, Playwrite_VN } from 'next/font/google'
 import '@mantine/core/styles.css'
 import './globals.css'
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core'
 import { theme } from '@/themes'
 
-const headingMono = Major_Mono_Display({
+const headingMono = Playwrite_VN({
   variable: '--font-heading-sans',
-  subsets: ['latin'],
   weight: ['400'],
 })
 
-const fontSans = Montserrat_Alternates({
+const fontSans = Cabin({
   variable: '--font-sans',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['vietnamese'],
+  weight: ['400', '500', '600', '700'],
 })
 
 export const metadata: Metadata = {

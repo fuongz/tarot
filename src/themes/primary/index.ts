@@ -4,7 +4,7 @@ const enma: MantineColorsTuple = ['#f7ecff', '#e7d6fb', '#caaaf1', '#ac7ce8', '#
 
 export const theme = createTheme({
   primaryColor: 'enma',
-  fontFamily: '"Montserrat Alternates", serif',
+  fontFamily: '"Cabin", serif',
   colors: {
     enma,
   },

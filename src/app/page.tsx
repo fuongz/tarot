@@ -3,6 +3,7 @@
 import { Button, Container, Group, Image, Text, Title } from '@mantine/core'
 import classes from './Home.module.css'
 import image from './../../public/hero-banner.svg'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
           <Title className={`${classes.title} font-heading`}>
             <span className={classes.highlight}>Enma</span> Tarrot!
           </Title>
-          <Text c="dimmed" mt="md">
+          <Text c="dimmed" mt="xl">
             Trong cuộc sống hiện đại, đôi khi chúng ta cần một chút lắng đọng để nhìn lại bản thân và tìm kiếm những lời khuyên cho những quyết định quan trọng.
           </Text>
 
@@ -22,9 +23,11 @@ export default function Home() {
           </Text>
 
           <Group mt={30}>
-            <Button variant="primary" radius="xl" size="md" className={classes.control}>
-              Cùng bắt đầu nào!
-            </Button>
+            <Link href="/">
+              <Button variant="primary" radius="xl" size="md" className={classes.control}>
+                Coming soon!
+              </Button>
+            </Link>
           </Group>
         </div>
         <Image src={image.src} className={classes.image} alt="" />
