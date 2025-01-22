@@ -4,6 +4,7 @@ import { Button, Container, Group, Image, Text, Title } from '@mantine/core'
 import classes from './Home.module.css'
 import image from './../../public/hero-banner.svg'
 import Link from 'next/link'
+import { motion } from 'motion/react'
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={`${classes.title} font-heading`}>
-            <span className={classes.highlight}>Enma</span> Tarrot!
+            <span>Enma</span> Tarrot!
           </Title>
           <Text c="dimmed" mt="xl">
             Trong cuộc sống hiện đại, đôi khi chúng ta cần một chút lắng đọng để nhìn lại bản thân và tìm kiếm những lời khuyên cho những quyết định quan trọng.
@@ -24,9 +25,11 @@ export default function Home() {
 
           <Group mt={30}>
             <Link href="/">
-              <Button variant="primary" radius="xl" size="md" className={classes.control}>
-                Coming soon!
-              </Button>
+              <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="primary" radius="xl" size="md" className={classes.control}>
+                  Coming soon!
+                </Button>
+              </motion.div>
             </Link>
           </Group>
         </div>
